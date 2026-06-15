@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SHADOW SYSTEM</title>
+    <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+
+    <div class="aura"></div>
+
+    <div class="system-window">
+
+        <div class="system-header">
+            <h1>SHADOW SYSTEM</h1>
+            <p>ARISE, PLAYER.</p>
+        </div>
+
+        <div class="player-panel">
+
+            <div class="stat-card">
+                <span>RANK</span>
+                <h2 id="rank">E-RANK</h2>
+            </div>
+
+            <div class="stat-card">
+                <span>CLEARED QUESTS</span>
+                <h2 id="count">0</h2>
+            </div>
+
+            <div class="stat-card">
+                <span>LEVEL</span>
+                <h2 id="level">1</h2>
+            </div>
+
+        </div>
+
+        <div class="quest-input">
+
+            <input
+                type="text"
+                id="input"
+                placeholder="Enter a new daily quest..."
+            >
+
+            <button onclick="addQuest()">
+                ACCEPT QUEST
+            </button>
+
+        </div>
+
+        <div class="quest-title">
+            ACTIVE QUESTS
+        </div>
+
+        <ul id="list"></ul>
+
+    </div>
+<div id="systemPopup" class="system-popup">
+
+    <div class="popup-box">
+
+        <h2>SYSTEM MESSAGE</h2>
+
+        <p>
+            Welcome, Player.
+
+            <br><br>
+
+            Complete quests to gain experience and increase your Hunter Rank.
+
+            <br><br>
+
+            Rank Progression:
+
+            <br>E-Rank : 0 - 4 Quests
+            <br>D-Rank : 5 - 9 Quests
+            <br>C-Rank : 10 - 19 Quests
+            <br>B-Rank : 20 - 29 Quests
+            <br>A-Rank : 30 - 49 Quests
+            <br>S-Rank : 50+ Quests
+
+            <br><br>
+
+            Every 5 quests completed = +1 Level
+        </p>
+
+        <div class="close-text">
+            PRESS ENTER OR CLICK ANYWHERE TO CONTINUE
+        </div>
+
+    </div>
+
+</div>
+
+    <script src="script1.js"></script>
+
+</body>
+</html>
