@@ -6,30 +6,97 @@ const rank = document.getElementById("rank");
 const level = document.getElementById("level");
 
 let cleared = 0;
+let currentRank = "E-RANK";
 
 function updateSystem(){
 
     level.textContent = Math.floor(cleared / 5) + 1;
 
+    let newRank = "E-RANK";
+    let message = "";
+
     if(cleared >= 150){
-        rank.textContent = "S-RANK";
+        newRank = "S-RANK";
+        message = `
+━━━━━━━━━━━━━━━━━━━━
+⚠ SYSTEM MESSAGE ⚠
+
+[AWAKENING COMPLETE]
+
+The Hunter has surpassed all limits.
+
+TITLE ACQUIRED:
+👑 SHADOW MONARCH
+
+The world trembles before your power.
+━━━━━━━━━━━━━━━━━━━━`;
     }
     else if(cleared >= 100){
-        rank.textContent = "A-RANK";
+        newRank = "A-RANK";
+        message = `
+━━━━━━━━━━━━━━━━━━━━
+⚠ SYSTEM MESSAGE ⚠
+
+[RANK UP]
+
+Congratulations, Hunter.
+
+You have ascended to
+🔥 A-RANK
+
+Only a few stand above you now.
+━━━━━━━━━━━━━━━━━━━━`;
     }
     else if(cleared >= 70){
-        rank.textContent = "B-RANK";
+        newRank = "B-RANK";
+        message = `
+━━━━━━━━━━━━━━━━━━━━
+⚠ SYSTEM MESSAGE ⚠
+
+[RANK UP]
+
+⚔️ B-RANK ACHIEVED
+
+Your strength has increased.
+
+New challenges await.
+━━━━━━━━━━━━━━━━━━━━`;
     }
     else if(cleared >= 40){
-        rank.textContent = "C-RANK";
+        newRank = "C-RANK";
+        message = `
+━━━━━━━━━━━━━━━━━━━━
+⚠ SYSTEM MESSAGE ⚠
+
+[RANK UP]
+
+💪 C-RANK ACHIEVED
+
+The System recognizes your growth.
+
+Continue clearing quests.
+━━━━━━━━━━━━━━━━━━━━`;
     }
     else if(cleared >= 20){
-        rank.textContent = "D-RANK";
-    }
-    else{
-        rank.textContent = "E-RANK";
+        newRank = "D-RANK";
+        message = `
+━━━━━━━━━━━━━━━━━━━━
+⚠ SYSTEM MESSAGE ⚠
+
+[RANK UP]
+
+🌟 D-RANK ACHIEVED
+
+The path of a true Hunter begins.
+━━━━━━━━━━━━━━━━━━━━`;
     }
 
+    if(newRank !== currentRank){
+        currentRank = newRank;
+        alert(message);
+    }
+
+    rank.textContent = newRank;
     count.textContent = cleared;
 }
 
