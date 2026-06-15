@@ -11,19 +11,19 @@ function updateSystem(){
 
     level.textContent = Math.floor(cleared / 5) + 1;
 
-    if(cleared >= 50){
+    if(cleared >= 150){
         rank.textContent = "S-RANK";
     }
-    else if(cleared >= 30){
+    else if(cleared >= 100){
         rank.textContent = "A-RANK";
     }
-    else if(cleared >= 20){
+    else if(cleared >= 70){
         rank.textContent = "B-RANK";
     }
-    else if(cleared >= 10){
+    else if(cleared >= 40){
         rank.textContent = "C-RANK";
     }
-    else if(cleared >= 5){
+    else if(cleared >= 20){
         rank.textContent = "D-RANK";
     }
     else{
